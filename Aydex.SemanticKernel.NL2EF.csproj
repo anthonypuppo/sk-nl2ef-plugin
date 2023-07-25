@@ -12,7 +12,7 @@
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.9" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="7.0.9" />
     <PackageReference Include="Microsoft.Extensions.Http.Polly" Version="7.0.9" />
-    <PackageReference Include="Microsoft.SemanticKernel" Version="0.17.230718.1-preview" />
+    <PackageReference Include="Microsoft.SemanticKernel" Version="0.18.230725.3-preview" />
     <PackageReference Include="Polly.Contrib.WaitAndRetry" Version="1.1.1" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
     <PackageReference Include="System.Linq.Async" Version="6.0.1" />
