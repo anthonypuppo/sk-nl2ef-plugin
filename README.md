@@ -4,9 +4,9 @@ This project is my entry to the Semantic Kernel Plugin Hackathon. It's designed 
 
 The demo connects to a modified version of the SQLite movies database available [here](https://www.kaggle.com/datasets/luizpaulodeoliveira/imdb-project-sql).
 
-![Screenshot 2023-07-25 at 1 15 38 AM](https://github.com/anthonypuppo/sk-nl2ef-plugin/assets/6828951/988bcd9b-b025-466f-ab36-c6fbac695a10)
+![Screenshot 2023-07-25 at 1 15 38 AM](/screenshots/chat.png)
 
-![Screenshot 2023-07-25 at 8 24 43 AM](https://github.com/anthonypuppo/sk-nl2ef-plugin/assets/6828951/bebf66cd-d249-4768-9caa-18d811bf1c1c)
+![Screenshot 2023-07-25 at 8 24 43 AM](/screenshots/swagger.png)
 
 
 ## Built With
