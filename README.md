@@ -6,6 +6,9 @@ The demo connects to a modified version of the SQLite movies database available 
 
 ![Screenshot 2023-07-25 at 1 15 38 AM](https://github.com/anthonypuppo/sk-nl2ef-plugin/assets/6828951/996fbc03-afe8-46c7-b528-c7a9fcfbbc81)
 
+![Screenshot 2023-07-25 at 8 24 43 AM](https://github.com/anthonypuppo/sk-nl2ef-plugin/assets/6828951/bebf66cd-d249-4768-9caa-18d811bf1c1c)
+
+
 ## Built With
 
 - .NET 7 Minimal Web APIs
