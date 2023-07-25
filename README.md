@@ -4,7 +4,13 @@ This project is my entry to the Semantic Kernel Plugin Hackathon. It's designed 
 
 The demo connects to a modified version of the SQLite movies database available [here](https://www.kaggle.com/datasets/luizpaulodeoliveira/imdb-project-sql).
 
+
+Via Chat Copilot:
+
 ![Screenshot 2023-07-25 at 1 15 38 AM](/screenshots/chat.png)
+
+
+Via Swagger:
 
 ![Screenshot 2023-07-25 at 8 24 43 AM](/screenshots/swagger.png)
 
