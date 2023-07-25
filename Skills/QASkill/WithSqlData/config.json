@@ -1,0 +1,21 @@
+{
+    "schema": 1,
+    "description": "Answer a question using tabular data queried from a SQL database as a source of truth.",
+    "type": "completion",
+    "input": {
+        "parameters": [
+            {
+                "name": "sql",
+                "description": "The SQL that was run to retrieve the data."
+            },
+            {
+                "name": "data",
+                "description": "The tabular formatted data retrieved from the database."
+            },
+            {
+                "name": "input",
+                "description": "The question."
+            }
+        ]
+    }
+}

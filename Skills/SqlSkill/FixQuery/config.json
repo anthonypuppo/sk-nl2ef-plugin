@@ -1,0 +1,21 @@
+{
+    "schema": 1,
+    "description": "Fix a SQL query that previously had an error while running against a database configured by the defined schema.",
+    "type": "completion",
+    "input": {
+        "parameters": [
+            {
+                "name": "input",
+                "description": "The SQL query."
+            },
+            {
+                "name": "schema",
+                "description": "The database schema that the SQL was run against."
+            },
+            {
+                "name": "error",
+                "description": "The error that occurred while executing the SQL."
+            }
+        ]
+    }
+}
