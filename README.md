@@ -1,4 +1,8 @@
-# Semantic Kernel Plugin Hackathon Entry
+# NL2EF
+
+#### Plugin which translates a question into SQL, fetches relevant data from the database, and formulates a response based on the retrieved data
+
+## Semantic Kernel Plugin Hackathon Entry
 
 This project is my entry to the Semantic Kernel Plugin Hackathon. It's designed to be a drop-in plugin service that can expose an existing database to be queried via natural language. It accomplishes this by leveraging the power of Entity Framework Core and OpenAI's embedding/GPT models to generate and construct SQL queries that retrieve relevant information for RAG based responses.
 
@@ -17,6 +21,7 @@ Via Swagger:
 
 ## Built With
 
+- [Semantic Kernel](https://github.com/microsoft/semantic-kernel)
 - .NET 7 Minimal Web APIs
 - Visual Studio Code (C# and C# Dev Kit Extensions)
 
@@ -33,6 +38,7 @@ Via Swagger:
 ## Future Enhancements
 
 - Code cleanup
+- Settings to define OpenAI vs Azure OpenAI endpoints
 - Modifying the prompts to produce better results
 - Moving hardcoded options to be environment configurable
 
@@ -44,7 +50,7 @@ Via Swagger:
 
 ## Getting Started
 
-To get a local copy up and running follow these simple steps.
+To get a local copy up and running follow these steps (this demo uses the OpenAI endpoints).
 
 ### Prerequisites
 
@@ -62,7 +68,11 @@ To get a local copy up and running follow these simple steps.
    ```sh
    dotnet restore
    ```
-3. Run the project
+3. Use `dotnet user-secrets` to set the OpenAI API key
+   ```sh
+   dotnet user-secrets set "SemanticKernel:OpenAIApiKey" "OPENAI_KEY"
+   ```
+5. Run the project
    ```sh
    dotnet run
    ```
