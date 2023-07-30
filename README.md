@@ -35,7 +35,6 @@ Via Swagger:
 ## Future Enhancements
 
 - Code cleanup
-- Settings to define OpenAI vs Azure OpenAI endpoints
 - Modifying the prompts to produce better results
 - Moving hardcoded options to be environment configurable
 
