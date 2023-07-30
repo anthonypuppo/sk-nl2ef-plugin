@@ -8,16 +8,13 @@ This project is my entry to the Semantic Kernel Plugin Hackathon. It's designed 
 
 The demo connects to a modified version of the SQLite movies database available [here](https://www.kaggle.com/datasets/luizpaulodeoliveira/imdb-project-sql).
 
-
 Via Chat Copilot:
 
 ![Screenshot 2023-07-25 at 1 15 38 AM](/screenshots/chat.png)
 
-
 Via Swagger:
 
 ![Screenshot 2023-07-25 at 8 24 43 AM](/screenshots/swagger.png)
-
 
 ## Built With
 
@@ -50,7 +47,7 @@ Via Swagger:
 
 ## Getting Started
 
-To get a local copy up and running follow these steps (this demo uses the OpenAI endpoints).
+To get a local copy up and running follow the below steps.
 
 ### Prerequisites
 
@@ -68,11 +65,16 @@ To get a local copy up and running follow these steps (this demo uses the OpenAI
    ```sh
    dotnet restore
    ```
-3. Use `dotnet user-secrets` to set the OpenAI API key
-   ```sh
-   dotnet user-secrets set "SemanticKernel:OpenAIApiKey" "OPENAI_KEY"
-   ```
-5. Run the project
+3. Open `appsettings.json`
+   - Update the `SemanticKernel:AIService` configuration section:
+     - Update `Type` to the AI service you will be using (i.e., `AzureOpenAI` or `OpenAI`).
+     - If your are using Azure OpenAI, add/update `Endpoint` to your Azure OpenAI resource Endpoint address.
+       > If you are using OpenAI, this property will be ignored.
+     - Set your Azure OpenAI or OpenAI key by opening a terminal in the project directory and using `dotnet user-secrets`
+       ```bash
+       dotnet user-secrets set "SemanticKernel:AIService:Key" "MY_AZUREOPENAI_OR_OPENAI_KEY"
+       ```
+4. Run the project
    ```sh
    dotnet run
    ```

@@ -5,6 +5,7 @@ using Aydex.SemanticKernel.NL2EF.Skills;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using Microsoft.SemanticKernel;
+using Microsoft.SemanticKernel.AI.Embeddings;
 using Microsoft.SemanticKernel.Connectors.AI.OpenAI.TextEmbedding;
 using Microsoft.SemanticKernel.Memory;
 
@@ -19,9 +20,8 @@ public static class SemanticKernelExtensions
         {
             var storage = serviceProvider.GetRequiredService<IMemoryStore>();
             var semanticKernelOptions = serviceProvider.GetRequiredService<IOptions<SemanticKernelOptions>>();
-            var openAIApiKey = semanticKernelOptions.Value.OpenAIApiKey;
-            var textEmbeddingModel = semanticKernelOptions.Value.OpenAITextEmbeddingModel;
-            var textEmbeddingGeneration = new OpenAITextEmbeddingGeneration(textEmbeddingModel, openAIApiKey);
+            var aiServiceOptions = semanticKernelOptions.Value.AIService;
+            var textEmbeddingGeneration = aiServiceOptions.ToTextEmbeddingsService();
             var semanticTextMemory = new SemanticTextMemory(storage, textEmbeddingGeneration);
 
             return semanticTextMemory;
@@ -31,12 +31,13 @@ public static class SemanticKernelExtensions
             var logger = serviceProvider.GetRequiredService<ILogger<IKernel>>();
             var memory = serviceProvider.GetRequiredService<ISemanticTextMemory>();
             var semanticKernelOptions = serviceProvider.GetRequiredService<IOptions<SemanticKernelOptions>>();
+            var aiServiceOptions = semanticKernelOptions.Value.AIService;
             var kernel = Kernel.Builder
                 .WithLogger(logger)
                 .WithMemory(memory)
                 .WithRetryHandlerFactory(new RetryHandlerFactory())
-                .WithOpenAITextEmbeddingGenerationService(semanticKernelOptions.Value.OpenAITextEmbeddingModel, semanticKernelOptions.Value.OpenAIApiKey)
-                .WithOpenAIChatCompletionService(semanticKernelOptions.Value.OpenAIChatCompletionModel, semanticKernelOptions.Value.OpenAIApiKey)
+                .WithEmbeddingBackend(aiServiceOptions)
+                .WithCompletionBackend(aiServiceOptions)
                 .Build();
 
             kernel.ImportSkills(serviceProvider);
@@ -69,6 +70,36 @@ public static class SemanticKernelExtensions
         });
 
         return services;
+    }
+
+    private static KernelBuilder WithCompletionBackend(this KernelBuilder kernelBuilder, AIServiceOptions options)
+    {
+        return options.Type switch
+        {
+            AIServiceOptions.AIServiceType.AzureOpenAI => kernelBuilder.WithAzureChatCompletionService(options.Models.Completion, options.Endpoint, options.Key),
+            AIServiceOptions.AIServiceType.OpenAI => kernelBuilder.WithOpenAIChatCompletionService(options.Models.Completion, options.Key),
+            _ => throw new ArgumentException($"Invalid {nameof(options.Type)} value."),
+        };
+    }
+
+    private static KernelBuilder WithEmbeddingBackend(this KernelBuilder kernelBuilder, AIServiceOptions options)
+    {
+        return options.Type switch
+        {
+            AIServiceOptions.AIServiceType.AzureOpenAI => kernelBuilder.WithAzureTextEmbeddingGenerationService(options.Models.Embedding, options.Endpoint, options.Key),
+            AIServiceOptions.AIServiceType.OpenAI => kernelBuilder.WithOpenAITextEmbeddingGenerationService(options.Models.Embedding, options.Key),
+            _ => throw new ArgumentException($"Invalid {nameof(options.Type)} value."),
+        };
+    }
+
+    private static ITextEmbeddingGeneration ToTextEmbeddingsService(this AIServiceOptions options)
+    {
+        return options.Type switch
+        {
+            AIServiceOptions.AIServiceType.AzureOpenAI => new AzureTextEmbeddingGeneration(options.Models.Embedding, options.Endpoint, options.Key),
+            AIServiceOptions.AIServiceType.OpenAI => new OpenAITextEmbeddingGeneration(options.Models.Embedding, options.Key),
+            _ => throw new ArgumentException("Invalid AIService value in embeddings backend settings"),
+        };
     }
 
     private static void ImportSkills(this IKernel kernel, IServiceProvider serviceProvider)
