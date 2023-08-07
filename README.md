@@ -2,6 +2,8 @@
 
 #### Plugin which translates a question into SQL, fetches relevant data from the database, and formulates a response based on the retrieved data
 
+#### ⭐ Winner of Microsoft's first Semantic Kernel hackathon in the "Most Useful for the Enterprise" category.
+
 ## Semantic Kernel Plugin Hackathon Entry
 
 This project is my entry to the Semantic Kernel Plugin Hackathon. It's designed to be a drop-in plugin service that can expose an existing database to be queried via natural language. It accomplishes this by leveraging the power of Entity Framework Core and OpenAI's embedding/GPT models to generate and construct SQL queries that retrieve relevant information for RAG based responses.
