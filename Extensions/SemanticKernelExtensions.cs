@@ -125,7 +125,7 @@ public static class SemanticKernelExtensions
             }
             catch (Exception e)
             {
-                kernel.Log.LogError("Failed to import skill from {Directory} ({Message})", subDirectory, e.Message);
+                kernel.Logger.LogError("Failed to import skill from {Directory} ({Message})", subDirectory, e.Message);
             }
         }
     }
