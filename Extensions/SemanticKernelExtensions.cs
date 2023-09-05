@@ -28,12 +28,12 @@ public static class SemanticKernelExtensions
         });
         services.AddScoped<IKernel>((serviceProvider) =>
         {
-            var logger = serviceProvider.GetRequiredService<ILogger<IKernel>>();
+            var loggerFactory = serviceProvider.GetRequiredService<ILoggerFactory>();
             var memory = serviceProvider.GetRequiredService<ISemanticTextMemory>();
             var semanticKernelOptions = serviceProvider.GetRequiredService<IOptions<SemanticKernelOptions>>();
             var aiServiceOptions = semanticKernelOptions.Value.AIService;
             var kernel = Kernel.Builder
-                .WithLogger(logger)
+                .WithLoggerFactory(loggerFactory)
                 .WithMemory(memory)
                 .WithRetryHandlerFactory(new RetryHandlerFactory())
                 .WithEmbeddingBackend(aiServiceOptions)
@@ -125,7 +125,7 @@ public static class SemanticKernelExtensions
             }
             catch (Exception e)
             {
-                kernel.Logger.LogError("Failed to import skill from {Directory} ({Message})", subDirectory, e.Message);
+                kernel.LoggerFactory.CreateLogger(typeof(SemanticKernelExtensions)).LogError("Failed to import skill from {Directory} ({Message})", subDirectory, e.Message);
             }
         }
     }

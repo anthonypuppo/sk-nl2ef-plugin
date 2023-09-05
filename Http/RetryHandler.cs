@@ -9,7 +9,7 @@ namespace Aydex.SemanticKernel.NL2EF.Http;
 
 public class RetryHandlerFactory : IDelegatingHandlerFactory
 {
-    public DelegatingHandler Create(ILogger? log)
+    public DelegatingHandler Create(ILoggerFactory? loggerFactory)
     {
         return new RetryHandler();
     }

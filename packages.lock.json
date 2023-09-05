@@ -46,15 +46,15 @@
       },
       "Microsoft.SemanticKernel": {
         "type": "Direct",
-        "requested": "[0.20.230821.4-preview, )",
-        "resolved": "0.20.230821.4-preview",
-        "contentHash": "qH+xSlQf5ftuJfCKkkflk5E8aHvxwX8m8o+WBfD/Mk4rtfGsnaL2CH+vNC6OKfk6M7pj8kdZ5z4JNzKObtKEWQ==",
+        "requested": "[0.21.230828.2-preview, )",
+        "resolved": "0.21.230828.2-preview",
+        "contentHash": "Jleximb/kK/0CUrNZXOFE7HFrlcuJ0eY4W20JKEd+fhVuk6Hg9CMrkMuZkvdWyn/6LA2gGuIdPNMz9vxik7TLw==",
         "dependencies": {
-          "Microsoft.SemanticKernel.Connectors.AI.OpenAI": "0.20.230821.4-preview",
-          "Microsoft.SemanticKernel.Core": "0.20.230821.4-preview",
-          "Microsoft.SemanticKernel.Planning.ActionPlanner": "0.20.230821.4-preview",
-          "Microsoft.SemanticKernel.Planning.SequentialPlanner": "0.20.230821.4-preview",
-          "Microsoft.SemanticKernel.Skills.Core": "0.20.230821.4-preview"
+          "Microsoft.SemanticKernel.Connectors.AI.OpenAI": "0.21.230828.2-preview",
+          "Microsoft.SemanticKernel.Core": "0.21.230828.2-preview",
+          "Microsoft.SemanticKernel.Planning.ActionPlanner": "0.21.230828.2-preview",
+          "Microsoft.SemanticKernel.Planning.SequentialPlanner": "0.21.230828.2-preview",
+          "Microsoft.SemanticKernel.Skills.Core": "0.21.230828.2-preview"
         }
       },
       "Polly.Contrib.WaitAndRetry": {
@@ -269,8 +269,8 @@
       },
       "Microsoft.SemanticKernel.Abstractions": {
         "type": "Transitive",
-        "resolved": "0.20.230821.4-preview",
-        "contentHash": "5/HN2oSvtqEptKM+hhA4z6XtSOa5BMmxtSCcDtwrviZ05WClQoMwUUrhNnS8+5SV4BgWl0mN6mKYR/3NTASBkQ==",
+        "resolved": "0.21.230828.2-preview",
+        "contentHash": "6ZKxKVYB45fkPHWUJvP47tKsVrcDiCBYNmTEhFRhffpj/zkzoD7NqpasMKo4tQysX5J7DAPGnHaegBYNYGJoDQ==",
         "dependencies": {
           "Microsoft.Bcl.AsyncInterfaces": "6.0.0",
           "Microsoft.Bcl.HashCode": "1.1.0",
@@ -280,46 +280,46 @@
       },
       "Microsoft.SemanticKernel.Connectors.AI.OpenAI": {
         "type": "Transitive",
-        "resolved": "0.20.230821.4-preview",
-        "contentHash": "/qGPfYDi+pwXhvWLEDxQyRc5e06unqVCpfL8OKRflmORE1KwjgozqWMqO3S+nGmm69btmruhj724GoyIXBPDnA==",
+        "resolved": "0.21.230828.2-preview",
+        "contentHash": "VMLwNhQs4qbXwP2OYBD8XmXDK2JCmmZIv5WKIdZa9vBcH/H9qqLbzLaZhbcyceCp9SFyJbo0cN3Ro3xjc2Cgbw==",
         "dependencies": {
           "Azure.AI.OpenAI": "1.0.0-beta.6",
-          "Microsoft.SemanticKernel.Core": "0.20.230821.4-preview"
+          "Microsoft.SemanticKernel.Core": "0.21.230828.2-preview"
         }
       },
       "Microsoft.SemanticKernel.Core": {
         "type": "Transitive",
-        "resolved": "0.20.230821.4-preview",
-        "contentHash": "anJGlCq7jcQqZJBTrjpojBBNdW4BACkVknUDOCpvszbO4Zy0UO770FoHAJxeAnJ5YmBTnsdfW5qEcsKTy3sKAg==",
+        "resolved": "0.21.230828.2-preview",
+        "contentHash": "Pi4nlpPbi7VX9UoxXLi0FH977CvmeE6hGZ5UvmyufBsb2FShWCo+YeDxtTJBa201oe9+4RQUYrf4BGXrs/t69Q==",
         "dependencies": {
-          "Microsoft.SemanticKernel.Abstractions": "0.20.230821.4-preview",
+          "Microsoft.SemanticKernel.Abstractions": "0.21.230828.2-preview",
           "System.Diagnostics.DiagnosticSource": "7.0.2"
         }
       },
       "Microsoft.SemanticKernel.Planning.ActionPlanner": {
         "type": "Transitive",
-        "resolved": "0.20.230821.4-preview",
-        "contentHash": "56joX+pgAcyYP5fboNZH2GdxJiC07Onp6Rj0CIPLjnTlNgHZy+2a1/SwP+LUExNBIQsaniEEn2lsIqYzj4SEzg==",
+        "resolved": "0.21.230828.2-preview",
+        "contentHash": "2+5pbG2IFR08szxCMP9CyGV0TwXxLEwqRCboDrblAVLU5dBvMJrp3XyVoUxjB0iu6oy5yiM5vNKd2wp/FQ9FYw==",
         "dependencies": {
-          "Microsoft.SemanticKernel.Abstractions": "0.20.230821.4-preview",
-          "Microsoft.SemanticKernel.Core": "0.20.230821.4-preview"
+          "Microsoft.SemanticKernel.Abstractions": "0.21.230828.2-preview",
+          "Microsoft.SemanticKernel.Core": "0.21.230828.2-preview"
         }
       },
       "Microsoft.SemanticKernel.Planning.SequentialPlanner": {
         "type": "Transitive",
-        "resolved": "0.20.230821.4-preview",
-        "contentHash": "0EiSckLta3eLYFZQGczBCF0MJN5nvMRnwrRhhL9OAMSRmPiFGrmmKT8FjPK9Fy6r6aGJ1fe+xWQlS6Cg1eJctQ==",
+        "resolved": "0.21.230828.2-preview",
+        "contentHash": "D0ipB+lTYKkJVMuwUrznWqJR637wM8glVG73vREvGPH+6mD+h5l65WJ0VJEk1KjV3DEIE/sEXnrnuEbwCrm4nw==",
         "dependencies": {
-          "Microsoft.SemanticKernel.Abstractions": "0.20.230821.4-preview",
-          "Microsoft.SemanticKernel.Core": "0.20.230821.4-preview"
+          "Microsoft.SemanticKernel.Abstractions": "0.21.230828.2-preview",
+          "Microsoft.SemanticKernel.Core": "0.21.230828.2-preview"
         }
       },
       "Microsoft.SemanticKernel.Skills.Core": {
         "type": "Transitive",
-        "resolved": "0.20.230821.4-preview",
-        "contentHash": "yFjG3S9OdXlytvIHJ1k+sjVhsNgf1yAIqMA+wVy+jwOiTE7SQLsgKvw6O24IFkC512BTUGQyeyMneoiorJfJgQ==",
+        "resolved": "0.21.230828.2-preview",
+        "contentHash": "QTSp6MJC34a4BPU0OnvFq21Pf5UhM4ji3Hlye7zeNFEXfry0CnEJEt/65RRSHNldepkpqOfNVveNTP58r7XniA==",
         "dependencies": {
-          "Microsoft.SemanticKernel.Core": "0.20.230821.4-preview"
+          "Microsoft.SemanticKernel.Core": "0.21.230828.2-preview"
         }
       },
       "Polly": {
