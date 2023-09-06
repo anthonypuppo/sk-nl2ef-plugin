@@ -1,7 +1,7 @@
-using Aydex.SemanticKernel.NL2EF.Data.Models;
+using AnthonyPuppo.SemanticKernel.NL2EF.Data.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace Aydex.SemanticKernel.NL2EF.Data;
+namespace AnthonyPuppo.SemanticKernel.NL2EF.Data;
 
 public class AppDbContext : DbContext
 {

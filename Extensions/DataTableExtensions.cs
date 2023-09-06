@@ -3,7 +3,7 @@ using System.Globalization;
 using System.Text;
 using CsvHelper;
 
-namespace Aydex.SemanticKernel.NL2EF.Extensions;
+namespace AnthonyPuppo.SemanticKernel.NL2EF.Extensions;
 
 public static class DataTableExtensions
 {

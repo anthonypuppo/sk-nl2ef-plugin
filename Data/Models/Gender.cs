@@ -1,9 +1,9 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using Aydex.SemanticKernel.NL2EF.Data.Configuration;
+using AnthonyPuppo.SemanticKernel.NL2EF.Data.Configuration;
 using Microsoft.EntityFrameworkCore;
 
-namespace Aydex.SemanticKernel.NL2EF.Data.Models;
+namespace AnthonyPuppo.SemanticKernel.NL2EF.Data.Models;
 
 [Table("genders")]
 [EntityTypeConfiguration(typeof(GenderConfiguration))]

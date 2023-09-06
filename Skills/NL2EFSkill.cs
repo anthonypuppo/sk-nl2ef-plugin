@@ -1,14 +1,14 @@
 using System.ComponentModel;
 using System.Data;
 using System.Text;
-using Aydex.SemanticKernel.NL2EF.Data;
-using Aydex.SemanticKernel.NL2EF.Extensions;
+using AnthonyPuppo.SemanticKernel.NL2EF.Data;
+using AnthonyPuppo.SemanticKernel.NL2EF.Extensions;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.SemanticKernel;
 using Microsoft.SemanticKernel.Orchestration;
 using Microsoft.SemanticKernel.SkillDefinition;
 
-namespace Aydex.SemanticKernel.NL2EF.Skills;
+namespace AnthonyPuppo.SemanticKernel.NL2EF.Skills;
 
 public class NL2EFSkill
 {

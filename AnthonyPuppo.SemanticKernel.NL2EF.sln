@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.002.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aydex.SemanticKernel.NL2EF", "Aydex.SemanticKernel.NL2EF.csproj", "{8596C1DF-D8C0-4367-9007-35D80D0C35AC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnthonyPuppo.SemanticKernel.NL2EF", "AnthonyPuppo.SemanticKernel.NL2EF.csproj", "{8596C1DF-D8C0-4367-9007-35D80D0C35AC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,7 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Aydex.SemanticKernel.NL2EF.Data.Models;
+namespace AnthonyPuppo.SemanticKernel.NL2EF.Data.Models;
 
 [Table("directors")]
 public class Director

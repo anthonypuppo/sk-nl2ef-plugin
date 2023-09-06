@@ -1,7 +1,7 @@
-using Aydex.SemanticKernel.NL2EF.Data;
-using Aydex.SemanticKernel.NL2EF.Extensions;
-using Aydex.SemanticKernel.NL2EF.Options;
-using Aydex.SemanticKernel.NL2EF.Skills;
+using AnthonyPuppo.SemanticKernel.NL2EF.Data;
+using AnthonyPuppo.SemanticKernel.NL2EF.Extensions;
+using AnthonyPuppo.SemanticKernel.NL2EF.Options;
+using AnthonyPuppo.SemanticKernel.NL2EF.Skills;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.FileProviders;

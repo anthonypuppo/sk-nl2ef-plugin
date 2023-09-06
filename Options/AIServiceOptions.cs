@@ -1,4 +1,4 @@
-namespace Aydex.SemanticKernel.NL2EF.Options;
+namespace AnthonyPuppo.SemanticKernel.NL2EF.Options;
 
 public sealed class AIServiceOptions
 {

@@ -1,7 +1,7 @@
-using Aydex.SemanticKernel.NL2EF.Data;
-using Aydex.SemanticKernel.NL2EF.Http;
-using Aydex.SemanticKernel.NL2EF.Options;
-using Aydex.SemanticKernel.NL2EF.Skills;
+using AnthonyPuppo.SemanticKernel.NL2EF.Data;
+using AnthonyPuppo.SemanticKernel.NL2EF.Http;
+using AnthonyPuppo.SemanticKernel.NL2EF.Options;
+using AnthonyPuppo.SemanticKernel.NL2EF.Skills;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using Microsoft.SemanticKernel;
@@ -9,7 +9,7 @@ using Microsoft.SemanticKernel.AI.Embeddings;
 using Microsoft.SemanticKernel.Connectors.AI.OpenAI.TextEmbedding;
 using Microsoft.SemanticKernel.Memory;
 
-namespace Aydex.SemanticKernel.NL2EF.Extensions;
+namespace AnthonyPuppo.SemanticKernel.NL2EF.Extensions;
 
 public static class SemanticKernelExtensions
 {

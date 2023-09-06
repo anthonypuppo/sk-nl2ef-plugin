@@ -5,7 +5,7 @@ using Polly.Contrib.WaitAndRetry;
 using Polly.Extensions.Http;
 using Polly.Wrap;
 
-namespace Aydex.SemanticKernel.NL2EF.Http;
+namespace AnthonyPuppo.SemanticKernel.NL2EF.Http;
 
 public class RetryHandlerFactory : IDelegatingHandlerFactory
 {

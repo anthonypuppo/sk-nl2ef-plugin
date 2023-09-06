@@ -3,7 +3,7 @@ using System.Data;
 using System.Data.Common;
 using Dapper;
 
-namespace Aydex.SemanticKernel.NL2EF.Extensions;
+namespace AnthonyPuppo.SemanticKernel.NL2EF.Extensions;
 
 public static class DbConnectionExtensions
 {

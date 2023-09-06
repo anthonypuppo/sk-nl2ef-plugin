@@ -1,8 +1,8 @@
-using Aydex.SemanticKernel.NL2EF.Data.Models;
+using AnthonyPuppo.SemanticKernel.NL2EF.Data.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace Aydex.SemanticKernel.NL2EF.Data.Configuration;
+namespace AnthonyPuppo.SemanticKernel.NL2EF.Data.Configuration;
 
 public class GenderConfiguration : IEntityTypeConfiguration<Gender>
 {
