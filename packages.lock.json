@@ -46,15 +46,28 @@
       },
       "Microsoft.SemanticKernel": {
         "type": "Direct",
-        "requested": "[0.21.230828.2-preview, )",
-        "resolved": "0.21.230828.2-preview",
-        "contentHash": "Jleximb/kK/0CUrNZXOFE7HFrlcuJ0eY4W20JKEd+fhVuk6Hg9CMrkMuZkvdWyn/6LA2gGuIdPNMz9vxik7TLw==",
+        "requested": "[0.22.230905.3-preview, )",
+        "resolved": "0.22.230905.3-preview",
+        "contentHash": "zeVCAL8MmCTs99aQSKo8qAv17WPnwbzWvhtBT6Lm1zJyDI+M6T9Il1ibkjwKKirhWmnSAzZQRUpzQGbsmlgffA==",
         "dependencies": {
-          "Microsoft.SemanticKernel.Connectors.AI.OpenAI": "0.21.230828.2-preview",
-          "Microsoft.SemanticKernel.Core": "0.21.230828.2-preview",
-          "Microsoft.SemanticKernel.Planning.ActionPlanner": "0.21.230828.2-preview",
-          "Microsoft.SemanticKernel.Planning.SequentialPlanner": "0.21.230828.2-preview",
-          "Microsoft.SemanticKernel.Skills.Core": "0.21.230828.2-preview"
+          "Microsoft.SemanticKernel.Connectors.AI.OpenAI": "0.22.230905.3-preview",
+          "Microsoft.SemanticKernel.Core": "0.22.230905.3-preview",
+          "Microsoft.SemanticKernel.Planning.ActionPlanner": "0.22.230905.3-preview",
+          "Microsoft.SemanticKernel.Planning.SequentialPlanner": "0.22.230905.3-preview",
+          "Microsoft.SemanticKernel.Reliability.Basic": "0.22.230905.3-preview",
+          "Microsoft.SemanticKernel.Skills.Core": "0.22.230905.3-preview",
+          "Microsoft.SemanticKernel.TemplateEngine.PromptTemplateEngine": "0.22.230905.3-preview"
+        }
+      },
+      "Microsoft.SemanticKernel.Reliability.Polly": {
+        "type": "Direct",
+        "requested": "[0.22.230905.3-preview, )",
+        "resolved": "0.22.230905.3-preview",
+        "contentHash": "2atm3xyU3nGZ/ncey989xSQSUR7IjbCrCs1kqQd06kHc4G1xzH1KSjRdWAcP4qCnQ7KDKysLz09YST/EEWKZbA==",
+        "dependencies": {
+          "Microsoft.SemanticKernel.Abstractions": "0.22.230905.3-preview",
+          "Microsoft.SemanticKernel.Core": "0.22.230905.3-preview",
+          "Polly": "7.2.4"
         }
       },
       "Polly.Contrib.WaitAndRetry": {
@@ -269,8 +282,8 @@
       },
       "Microsoft.SemanticKernel.Abstractions": {
         "type": "Transitive",
-        "resolved": "0.21.230828.2-preview",
-        "contentHash": "6ZKxKVYB45fkPHWUJvP47tKsVrcDiCBYNmTEhFRhffpj/zkzoD7NqpasMKo4tQysX5J7DAPGnHaegBYNYGJoDQ==",
+        "resolved": "0.22.230905.3-preview",
+        "contentHash": "BU9uJGg23Zdc+XeCItJWwu/gjPSQ+syAqQtrrtVFTEXLuPL9KjhSeaaxPpzciy+6n5WPMM6ZCQEk94QSRabPDA==",
         "dependencies": {
           "Microsoft.Bcl.AsyncInterfaces": "6.0.0",
           "Microsoft.Bcl.HashCode": "1.1.0",
@@ -280,52 +293,69 @@
       },
       "Microsoft.SemanticKernel.Connectors.AI.OpenAI": {
         "type": "Transitive",
-        "resolved": "0.21.230828.2-preview",
-        "contentHash": "VMLwNhQs4qbXwP2OYBD8XmXDK2JCmmZIv5WKIdZa9vBcH/H9qqLbzLaZhbcyceCp9SFyJbo0cN3Ro3xjc2Cgbw==",
+        "resolved": "0.22.230905.3-preview",
+        "contentHash": "69e7z/O3eZkDlVwrPkVgJXajDOiJZMeTtYCxxyW7MpPL/AvybEBd3BC+JNVPrPIzZGZiu9mQCmPU2i4O3Yrc+g==",
         "dependencies": {
           "Azure.AI.OpenAI": "1.0.0-beta.6",
-          "Microsoft.SemanticKernel.Core": "0.21.230828.2-preview"
+          "Microsoft.SemanticKernel.Core": "0.22.230905.3-preview"
         }
       },
       "Microsoft.SemanticKernel.Core": {
         "type": "Transitive",
-        "resolved": "0.21.230828.2-preview",
-        "contentHash": "Pi4nlpPbi7VX9UoxXLi0FH977CvmeE6hGZ5UvmyufBsb2FShWCo+YeDxtTJBa201oe9+4RQUYrf4BGXrs/t69Q==",
+        "resolved": "0.22.230905.3-preview",
+        "contentHash": "kCThIpvA1OdlMTyasYNI4Ji69YpgYesOcs41hHQI8sSP3/3PVoi2IxrxRbyABJQ2spCgNfYyQETSHHmJZIgCng==",
         "dependencies": {
-          "Microsoft.SemanticKernel.Abstractions": "0.21.230828.2-preview",
+          "Microsoft.SemanticKernel.Abstractions": "0.22.230905.3-preview",
           "System.Diagnostics.DiagnosticSource": "7.0.2"
         }
       },
       "Microsoft.SemanticKernel.Planning.ActionPlanner": {
         "type": "Transitive",
-        "resolved": "0.21.230828.2-preview",
-        "contentHash": "2+5pbG2IFR08szxCMP9CyGV0TwXxLEwqRCboDrblAVLU5dBvMJrp3XyVoUxjB0iu6oy5yiM5vNKd2wp/FQ9FYw==",
+        "resolved": "0.22.230905.3-preview",
+        "contentHash": "Gq1j0Tzb4dboC4kwe1pu56CwyDT2jtBqsPCGIeaAjsXaRXm83nPyB6jMiNCts6bgpErWhfezhS4Nm9FGIUdndw==",
         "dependencies": {
-          "Microsoft.SemanticKernel.Abstractions": "0.21.230828.2-preview",
-          "Microsoft.SemanticKernel.Core": "0.21.230828.2-preview"
+          "Microsoft.SemanticKernel.Abstractions": "0.22.230905.3-preview",
+          "Microsoft.SemanticKernel.Core": "0.22.230905.3-preview"
         }
       },
       "Microsoft.SemanticKernel.Planning.SequentialPlanner": {
         "type": "Transitive",
-        "resolved": "0.21.230828.2-preview",
-        "contentHash": "D0ipB+lTYKkJVMuwUrznWqJR637wM8glVG73vREvGPH+6mD+h5l65WJ0VJEk1KjV3DEIE/sEXnrnuEbwCrm4nw==",
+        "resolved": "0.22.230905.3-preview",
+        "contentHash": "l2KU8WtBPiMPy8I0iJQ4VXjy+w6gGK44l1I50OL05qr6vYlCd6ispzn17/houhl1RpqhX7MmvUxCrbDhK52Ygg==",
         "dependencies": {
-          "Microsoft.SemanticKernel.Abstractions": "0.21.230828.2-preview",
-          "Microsoft.SemanticKernel.Core": "0.21.230828.2-preview"
+          "Microsoft.SemanticKernel.Abstractions": "0.22.230905.3-preview",
+          "Microsoft.SemanticKernel.Core": "0.22.230905.3-preview"
+        }
+      },
+      "Microsoft.SemanticKernel.Reliability.Basic": {
+        "type": "Transitive",
+        "resolved": "0.22.230905.3-preview",
+        "contentHash": "XCzEUMaBgDXOMtpKT8O9fuB857/TZVfrdJ0XiTGrEJopggo2GU6MQzFTCGZXvuXTVVhl0EiedfiV2StmTzS5hA==",
+        "dependencies": {
+          "Microsoft.SemanticKernel.Abstractions": "0.22.230905.3-preview",
+          "Microsoft.SemanticKernel.Core": "0.22.230905.3-preview"
         }
       },
       "Microsoft.SemanticKernel.Skills.Core": {
         "type": "Transitive",
-        "resolved": "0.21.230828.2-preview",
-        "contentHash": "QTSp6MJC34a4BPU0OnvFq21Pf5UhM4ji3Hlye7zeNFEXfry0CnEJEt/65RRSHNldepkpqOfNVveNTP58r7XniA==",
+        "resolved": "0.22.230905.3-preview",
+        "contentHash": "9sNGmvrDDrs31kssHTCrcab31ygrgYZ5HjTwn9CXea+SUcwcx8B0BYUMNOENRt8qqXQAmsSHt43YSVAcagiSzA==",
         "dependencies": {
-          "Microsoft.SemanticKernel.Core": "0.21.230828.2-preview"
+          "Microsoft.SemanticKernel.Core": "0.22.230905.3-preview"
+        }
+      },
+      "Microsoft.SemanticKernel.TemplateEngine.PromptTemplateEngine": {
+        "type": "Transitive",
+        "resolved": "0.22.230905.3-preview",
+        "contentHash": "5JUef1kVn/dL+ViA+j48mOi3hH/DenEXp6t9MyE2Ocrn7fOnNInLmDzM5IDZGgK4Mt9ky8010iN9fcYtgtcFFg==",
+        "dependencies": {
+          "Microsoft.SemanticKernel.Abstractions": "0.22.230905.3-preview"
         }
       },
       "Polly": {
         "type": "Transitive",
-        "resolved": "7.2.3",
-        "contentHash": "DeCY0OFbNdNxsjntr1gTXHJ5pKUwYzp04Er2LLeN3g6pWhffsGuKVfMBLe1lw7x76HrPkLxKEFxBlpRxS2nDEQ=="
+        "resolved": "7.2.4",
+        "contentHash": "bw00Ck5sh6ekduDE3mnCo1ohzuad946uslCDEENu3091+6UKnBuKLo4e+yaNcCzXxOZCXWY2gV4a35+K1d4LDA=="
       },
       "Polly.Extensions.Http": {
         "type": "Transitive",

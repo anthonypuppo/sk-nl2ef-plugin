@@ -1,5 +1,5 @@
+using System.Net;
 using AnthonyPuppo.SemanticKernel.NL2EF.Data;
-using AnthonyPuppo.SemanticKernel.NL2EF.Http;
 using AnthonyPuppo.SemanticKernel.NL2EF.Options;
 using AnthonyPuppo.SemanticKernel.NL2EF.Skills;
 using Microsoft.EntityFrameworkCore;
@@ -8,6 +8,10 @@ using Microsoft.SemanticKernel;
 using Microsoft.SemanticKernel.AI.Embeddings;
 using Microsoft.SemanticKernel.Connectors.AI.OpenAI.TextEmbedding;
 using Microsoft.SemanticKernel.Memory;
+using Polly;
+using Polly.Contrib.WaitAndRetry;
+using Polly.Extensions.Http;
+using Polly.Wrap;
 
 namespace AnthonyPuppo.SemanticKernel.NL2EF.Extensions;
 
@@ -35,7 +39,7 @@ public static class SemanticKernelExtensions
             var kernel = Kernel.Builder
                 .WithLoggerFactory(loggerFactory)
                 .WithMemory(memory)
-                .WithRetryHandlerFactory(new RetryHandlerFactory())
+                .WithRetryPolly(GetPollyRetryPolicy())
                 .WithEmbeddingBackend(aiServiceOptions)
                 .WithCompletionBackend(aiServiceOptions)
                 .Build();
@@ -135,5 +139,21 @@ public static class SemanticKernelExtensions
         var skill = new NL2EFSkill(kernel, dbContext);
 
         kernel.ImportSkill(skill, nameof(NL2EFSkill));
+    }
+
+    private static AsyncPolicyWrap<HttpResponseMessage> GetPollyRetryPolicy()
+    {
+        return Policy.WrapAsync(
+            Policy
+                .HandleResult<HttpResponseMessage>((response) => response.StatusCode == HttpStatusCode.TooManyRequests)
+                .WaitAndRetryAsync(
+                    retryCount: 1,
+                    sleepDurationProvider: (retryCount, result, context) => result.Result.Headers.RetryAfter?.Delta
+                        ?? result.Result.Headers.RetryAfter?.Date?.Subtract(DateTimeOffset.UtcNow)
+                        ?? TimeSpan.FromSeconds(3),
+                    onRetryAsync: (result, withDuration, retryCount, context) => Task.CompletedTask),
+            HttpPolicyExtensions
+                .HandleTransientHttpError()
+                .WaitAndRetryAsync(Backoff.DecorrelatedJitterBackoffV2(medianFirstRetryDelay: TimeSpan.FromSeconds(1), retryCount: 3)));
     }
 }
